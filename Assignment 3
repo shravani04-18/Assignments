@@ -1,0 +1,58 @@
+include<stdio.h>
+int main()
+{
+int choice;
+float n1, n2, result;
+do
+{
+printf("======MENU======\n");
+printf("1. Addition\n");
+printf("2. Subtraction\n");
+printf("3. Multiplication\n");
+printf("4. Division\n");
+printf("5. Exit program\n");
+printf("Enter your choice:\n");
+scanf("%d", &choice);
+if(1<=choice && choice<=4)
+{
+printf("Enter the 1st no\n");
+scanf("%f", &n1);
+printf("Enter the 2nd no\n");
+scanf("%f", &n2);
+}
+switch(choice)
+{
+case 1:
+result= n1+n2;
+printf("Sum= %.2f\n", result);
+break;
+case 2:
+result= n1-n2;
+printf("Subtraction= %.2f\n", result);
+break;
+case 3:
+result= n1*n2;
+printf("Multiplication= %.2f\n", result);
+break;
+case 4:
+if(n2!=0)
+{
+result= n1/n2;
+printf("Division= %.2f\n", result);
+}
+else 
+{
+printf("Cannot divide by zero!!!\n");
+}
+break;
+case 5:
+printf("Exiting program\n");
+break;
+default:
+printf("Invalid choice\n");
+break;
+}
+}
+while(choice!=5);
+return 0;
+}
